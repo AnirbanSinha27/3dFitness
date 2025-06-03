@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #e53e3e;
+  --primary-dark: #c53030;
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .red-gradient {
+    @apply bg-gradient-to-r from-red-600 to-red-800;
+  }
+  
+  .red-gradient-hover {
+    @apply hover:from-red-700 hover:to-red-900;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
